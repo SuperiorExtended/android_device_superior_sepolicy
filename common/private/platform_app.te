@@ -15,3 +15,7 @@ allow platform_app kernel:system syslog_read;
 
 # DC Dimming
 allow platform_app vendor_sysfs_dc_dim:file rw_file_perms;
+
+# Allow Touch HAL service to be found
+hal_client_domain(platform_app, hal_lineage_touch)
+
